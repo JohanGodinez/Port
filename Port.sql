@@ -7,15 +7,15 @@ Create Table cuentas
 	nombre nvarchar(60) not null,
 	telefono nvarchar(12) not null,
 	correo nvarchar(100) not null,
-	constraint PK_Cuentas primary key (cuentaID)
+	constraint pk_Cuentas primary key (cuentaID)
 );
 
-Create Table tipoEmpresa
+Create Table tipoEmpresas
 (
 	tipoempresaid int auto_increment,
 	nombre nvarchar(60) not null,
 	descripcion nvarchar(100),
-	constraint pk_tipoempresa primary key (tipoempresaid)
+	constraint pk_tipoempresas primary key (tipoempresaid)
 );
 
 Create Table empresas
@@ -38,7 +38,7 @@ Create Table categorias
 	empresaid int not null,
 	nombre nvarchar(60) not null,
 	constraint pk_categorias primary key (categoriaid),
-	constraint fk_empresas foreign key (empresaid) references empresas(empresaid)
+	constraint fk_categorias_empresas foreign key (empresaid) references empresas(empresaid)
 );
 
 Create Table productos
@@ -50,15 +50,15 @@ Create Table productos
 	stock smallint not null,
 	precio double not null,
 	constraint pk_productos primary key (productoid),
-	constraint fk_empresas foreign key (empresaid) references empresas(empresaid)
+	constraint fk_productos_empresas foreign key (empresaid) references empresas(empresaid)
 );
 
 Create Table iva
 (
 	ivaid int auto_increment,
 	valor double not null,
-	constraint pk_iva 
-)
+	constraint pk_iva primary key (ivaid)
+);
 
 Create Table ventas
 (
@@ -84,7 +84,7 @@ Create Table detventas
 	subtotal double not null,
 	constraint pk_detventas primary key (detventaid),
 	constraint fk_detventas_ventas foreign key (ventaid) references ventas(ventaid)
-)
+);
 
 
 
