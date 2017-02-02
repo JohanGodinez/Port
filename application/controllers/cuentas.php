@@ -10,7 +10,9 @@ class Cuentas extends CI_Controller {
     public function index()
 	{   
         $datos['string'] ='Crear cuenta';
+        $this->load->view('head');
 		$this->load->view('cuentas/crear',$datos);
+        $this->load->view('footer');
 	}
 
     public function insert(){
@@ -20,5 +22,7 @@ class Cuentas extends CI_Controller {
             'correo' => $this->input->post('correoCuenta')
         );
         $this->cuentas_model->insertCuenta($datos);
+        $datos['string'] ='Cuenta Creada';
+		$this->load->view('cuentas/crear',$datos);
     }
 }
