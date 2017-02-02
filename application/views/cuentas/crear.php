@@ -3,20 +3,29 @@
     <head>
         <title>Cuentas</title>
     </head>
-    <body>
-        <h1>Hola mundo</h1>
-        <from class="form" action="">
-            <div class="form-group">
-                <label class="control-label">Nombre</label>
-                <input class="from-control" type="text" name="nombre" placeholder="Nombre">
+    <body> 
+        <h1><?= $string?></h1>
+        <?= form_open("/cuentas/insert")?>
+        <?php
+            $nombre = array("name" => "nombreCuenta",'placeholder' => "Nombre");
+            $telefono = array('name' => 'telefonoCuenta','placeholder' => 'Telefono');
+            $correo = array('name' => 'correoCuenta','placeholder' => 'Correo');
+        ?>
+            <div>
+                <label>Nombre</label>
+                <?= form_input($nombre)?>
             </div>
-            <div class="form-group">
-                <label class="control-label">Nombre</label>
-                <input class="from-control" type="text" name="nombre" placeholder="Nombre">
+            <div>
+                <label>Telefono</label>
+                <?= form_input($telefono)?>
             </div>
-            <div class="form-group">
-                <button class="btn">Guardar</button>
+            <div>
+                <label>Correo</label>
+                <?= form_input($correo)?>
             </div>
-        </form>
+            <div>
+                <button>Guardar</button>
+            </div>
+        <?= form_close()?>
     </body>
 </html>
