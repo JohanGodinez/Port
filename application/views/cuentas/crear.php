@@ -1,4 +1,4 @@
-<h1><?= $string?></h1>
+<h1 class="text-center"><?= $string?></h1>
 <style>
     .form-control, .btn{
         border-radius: 0;
