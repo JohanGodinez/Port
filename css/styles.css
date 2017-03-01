@@ -1,0 +1,15 @@
+.form-control, .btn, .input-group-addon{
+    border-color: #2c3e50;
+}
+.btn,.input-group-addon{
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+/*.btnright:hover{
+    background: #34495e;
+    color: #bdc3c7;
+}*/
+input[type=text]:focus{
+    outline: none;
+}
+textarea {resize: vertical;}

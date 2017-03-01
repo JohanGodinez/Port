@@ -10,21 +10,29 @@
         top: 30px;*/
         right:8.3%;
         top:4%;
-        background: #2c3e50;
-        color: #ecf0f1;
+        /*background: #2c3e50;
+        color: #ecf0f1;*/
     }
-    .btnright:hover{
+    /*.btnright:hover{
         background: #34495e;
         color: #bdc3c7;
-    }
+    }*/
 </style>
-<button class="btn btnright">Nueva</button>
+<a class="btn btnright" href="/index.php/productos/crear">Nueva</a>
 <table class="table">
 <tr>
     <th>Nombre</th>
-    <th>Nombre Comercial</th>
-    <th>Telefono</th>
+    <th>categoira</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
 </tr>
+<tr>
+    <td>Nombre</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
 <?php
     // foreach ($empresas->result() as $empresa){
 
