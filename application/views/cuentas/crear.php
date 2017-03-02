@@ -1,12 +1,15 @@
-<h1 class="text-center"><?= $string?></h1>
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/stilo.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-    .form-control, .btn{
-        border-radius: 0;
-        border-color: #27ae60;
+    h1{
+        margin-top: 100px
     }
 </style>
+<h1 class="text-center"><?= $string?></h1>
 <?php
-    $attributes = array('class' => 'form col-md-6 col-md-offset-3', 'id' => 'from');
+    $attributes = array('class' => 'form col-md-4 col-md-offset-4', 'id' => 'from');
  ?>
 <?= form_open("/cuentas/insert",$attributes)?>
 <?php

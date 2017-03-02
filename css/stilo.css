@@ -1,0 +1,51 @@
+.menu{
+	background: rgba(0,0,0,0.8);
+	position: fixed;
+	height: 100%;
+	width: 230px;
+	top: 0;
+	left: 0;
+}
+.list-group>li{
+	background: transparent;
+	border: none;
+	color: rgba(255,255,255,0.8);
+}
+.hove:hover{
+	cursor: pointer;
+	background: rgba(255,255,255,0.2);
+	transition: .5s all;
+}
+.resaltar{
+	font-size: 1.6em;
+}
+.icon{
+	margin-right: 20px;
+}
+
+th{
+	background: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,0.8);
+}
+
+
+.form-control, input{
+    border-width: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control:focus, input:focus{
+	box-shadow: none;
+	border: 2px solid #000;
+}
+.btn-default{
+	background: #fff;
+	border: 2px solid #ccc;
+	font-weight: bold;
+}
+.btn-default:hover{
+	background: #fff;
+	border: 2px solid #000;
+	font-weight: bold;
+}
